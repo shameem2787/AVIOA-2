@@ -1,0 +1,129 @@
+/* ============================================================
+   AIVOA RCA Module — Design System
+   Palette: Charcoal Black · Soft Gold · Silver · Warm White
+   Effects: Glassmorphism + Liquid morphism only
+   ============================================================ */
+
+:root {
+  /* Core palette — no blue, no purple */
+  --bg-deep: #0a0a0b;
+  --bg-surface: #121214;
+  --bg-elevated: #1a1a1e;
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-strong: rgba(255, 255, 255, 0.07);
+
+  --gold: #d4a84b;
+  --gold-soft: #e8c97a;
+  --gold-muted: rgba(212, 168, 75, 0.18);
+  --gold-border: rgba(212, 168, 75, 0.35);
+
+  --silver: #c0c0c8;
+  --silver-muted: #8a8a96;
+  --silver-dim: #5c5c68;
+
+  --white: #f5f5f7;
+  --white-soft: #e8e8ec;
+
+  --success: #6b9b6e;
+  --warning: #c9a227;
+  --critical: #c45c4a;
+  --major: #d4a84b;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-liquid: 0 12px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-deep);
+  color: var(--white);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* Subtle animated liquid background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 20%, rgba(212, 168, 75, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 85% 75%, rgba(192, 192, 200, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--silver-dim);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--silver-muted);
+}
+
+/* Utility classes */
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: var(--shadow-glass);
+}
+
+.glass-strong {
+  background: var(--bg-glass-strong);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: var(--shadow-liquid);
+}
+
+.liquid {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(212, 168, 75, 0.04) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-liquid);
+}
+
+.text-gold { color: var(--gold); }
+.text-silver { color: var(--silver); }
+.text-muted { color: var(--silver-muted); }
+.text-dim { color: var(--silver-dim); }
+
+.font-mono { font-family: var(--font-mono); }

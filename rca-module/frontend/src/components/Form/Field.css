@@ -1,0 +1,58 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--silver-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.field-value {
+  font-size: 13.5px;
+  color: var(--white-soft);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 9px;
+  padding: 9px 12px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.field-value.multiline {
+  white-space: pre-wrap;
+  line-height: 1.55;
+  min-height: 64px;
+  align-items: flex-start;
+}
+
+.field-value.empty {
+  color: var(--silver-dim);
+}
+
+.field.sev-critical .field-value {
+  border-color: rgba(196, 92, 74, 0.4);
+  color: var(--critical);
+  background: rgba(196, 92, 74, 0.08);
+}
+
+.field.sev-major .field-value {
+  border-color: var(--gold-border);
+  color: var(--gold-soft);
+  background: var(--gold-muted);
+}
+
+.field.sev-minor .field-value {
+  border-color: rgba(107, 155, 110, 0.3);
+  color: var(--success);
+  background: rgba(107, 155, 110, 0.08);
+}

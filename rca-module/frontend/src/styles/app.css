@@ -1,0 +1,38 @@
+.workspace {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  height: calc(100vh - 72px);
+  padding: 16px 18px 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-pane,
+.copilot-pane {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.form-pane {
+  padding: 0;
+}
+
+.copilot-pane {
+  padding: 0;
+}
+
+@media (max-width: 1100px) {
+  .workspace {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: auto;
+  }
+  .form-pane,
+  .copilot-pane {
+    min-height: 520px;
+  }
+}

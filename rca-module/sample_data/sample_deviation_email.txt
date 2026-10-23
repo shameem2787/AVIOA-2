@@ -1,0 +1,21 @@
+Subject: Deviation Report – Foreign Matter in Metformin Hydrochloride API Batch MFH260712A
+
+From: quality@abcformulations.com
+To: qa@zenithlifesciences.com
+Date: 18 June 2026
+
+Dear Quality Team,
+
+During incoming quality inspection of Metformin Hydrochloride API (Grade IP/BP), Batch / Lot Number MFH260712A, manufactured on 25 June 2026, our warehouse team observed multiple dark foreign particles inside one sealed HDPE drum (25 kg).
+
+The drum showed no visible external damage. Material has been quarantined pending your investigation.
+
+Complaint Reference: CC-2026-00154
+Affected Quantity: 25 kg (1 HDPE Drum)
+Customer: ABC Formulations Ltd.
+
+Please investigate and provide root cause analysis along with CAPA recommendations at the earliest.
+
+Regards,
+Quality Assurance
+ABC Formulations Ltd.
